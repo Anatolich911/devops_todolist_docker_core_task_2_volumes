@@ -8,7 +8,8 @@ JS  | [jQuery](https://jquery.com/)
 
 ## Explore
 Try it out by installing the requirements. (Works only with python >= 3.8, due to Django 4)
-
+    python3 -m venv venv 
+    source venv/bin/activate
     pip install -r requirements.txt
 
 Create a database schema:
@@ -62,3 +63,26 @@ or start on the [landing page](http://localhost:8000/)
 14. README.md should contain a link to your personal docker hub repository win an app image
 15. README.md should contain instructions on how to access the application via a browser.
 16. Create PR with your changes and attach it for validation on a platform
+
+
+
+
+
+
+
+
+
+
+How to do this task:
+1. Create Dockerfile.mysql
+2. docker  build . -f Dockerfile.mysql -t mysql:1.0.0 
+3. docker run -d -p 3306:3306 --name mysql-app -v /var/lib/mysql mysql:1.0    
+4. docker build . -f Dockerfile  -t todoapp:2.0.0
+5. docker run -p 8080:8080 --name todoapp todoapp:2.0.0
+6. Open in browser http://localhost:8080
+
+
+Docker Registry 
+
+https://hub.docker.com/r/anatolich911/mysql-local/general
+https://hub.docker.com/r/anatolich911/todoapp
